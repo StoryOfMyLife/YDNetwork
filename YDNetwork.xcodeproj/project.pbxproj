@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BFCE4C531991D89C00E6DC19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCE4C521991D89C00E6DC19 /* Foundation.framework */; };
+		BFCE4C551991D89C00E6DC19 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCE4C541991D89C00E6DC19 /* CoreGraphics.framework */; };
+		BFCE4C571991D89C00E6DC19 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCE4C561991D89C00E6DC19 /* UIKit.framework */; };
+		BFCE4C5D1991D89C00E6DC19 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFCE4C5B1991D89C00E6DC19 /* InfoPlist.strings */; };
+		BFCE4C5F1991D89C00E6DC19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCE4C5E1991D89C00E6DC19 /* main.m */; };
+		BFCE4C631991D89C00E6DC19 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCE4C621991D89C00E6DC19 /* AppDelegate.m */; };
+		BFCE4C661991D89C00E6DC19 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCE4C641991D89C00E6DC19 /* Main_iPhone.storyboard */; };
+		BFCE4C691991D89C00E6DC19 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCE4C671991D89C00E6DC19 /* Main_iPad.storyboard */; };
+		BFCE4C6C1991D89C00E6DC19 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCE4C6B1991D89C00E6DC19 /* ViewController.m */; };
+		BFCE4C6E1991D89C00E6DC19 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFCE4C6D1991D89C00E6DC19 /* Images.xcassets */; };
+		BFCE4C751991D89C00E6DC19 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCE4C741991D89C00E6DC19 /* XCTest.framework */; };
+		BFCE4C761991D89C00E6DC19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCE4C521991D89C00E6DC19 /* Foundation.framework */; };
+		BFCE4C771991D89C00E6DC19 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCE4C561991D89C00E6DC19 /* UIKit.framework */; };
+		BFCE4C7F1991D89C00E6DC19 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFCE4C7D1991D89C00E6DC19 /* InfoPlist.strings */; };
+		BFCE4C811991D89C00E6DC19 /* YDNetworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCE4C801991D89C00E6DC19 /* YDNetworkTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BFCE4C781991D89C00E6DC19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFCE4C471991D89C00E6DC19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFCE4C4E1991D89C00E6DC19;
+			remoteInfo = YDNetwork;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BFCE4C4F1991D89C00E6DC19 /* YDNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YDNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFCE4C521991D89C00E6DC19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BFCE4C541991D89C00E6DC19 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BFCE4C561991D89C00E6DC19 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BFCE4C5A1991D89C00E6DC19 /* YDNetwork-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YDNetwork-Info.plist"; sourceTree = "<group>"; };
+		BFCE4C5C1991D89C00E6DC19 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BFCE4C5E1991D89C00E6DC19 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BFCE4C601991D89C00E6DC19 /* YDNetwork-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YDNetwork-Prefix.pch"; sourceTree = "<group>"; };
+		BFCE4C611991D89C00E6DC19 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BFCE4C621991D89C00E6DC19 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BFCE4C651991D89C00E6DC19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		BFCE4C681991D89C00E6DC19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		BFCE4C6A1991D89C00E6DC19 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BFCE4C6B1991D89C00E6DC19 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BFCE4C6D1991D89C00E6DC19 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BFCE4C731991D89C00E6DC19 /* YDNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YDNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFCE4C741991D89C00E6DC19 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BFCE4C7C1991D89C00E6DC19 /* YDNetworkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YDNetworkTests-Info.plist"; sourceTree = "<group>"; };
+		BFCE4C7E1991D89C00E6DC19 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BFCE4C801991D89C00E6DC19 /* YDNetworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YDNetworkTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BFCE4C4C1991D89C00E6DC19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFCE4C551991D89C00E6DC19 /* CoreGraphics.framework in Frameworks */,
+				BFCE4C571991D89C00E6DC19 /* UIKit.framework in Frameworks */,
+				BFCE4C531991D89C00E6DC19 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFCE4C701991D89C00E6DC19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFCE4C751991D89C00E6DC19 /* XCTest.framework in Frameworks */,
+				BFCE4C771991D89C00E6DC19 /* UIKit.framework in Frameworks */,
+				BFCE4C761991D89C00E6DC19 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BFCE4C461991D89C00E6DC19 = {
+			isa = PBXGroup;
+			children = (
+				BFCE4C581991D89C00E6DC19 /* YDNetwork */,
+				BFCE4C7A1991D89C00E6DC19 /* YDNetworkTests */,
+				BFCE4C511991D89C00E6DC19 /* Frameworks */,
+				BFCE4C501991D89C00E6DC19 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BFCE4C501991D89C00E6DC19 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFCE4C4F1991D89C00E6DC19 /* YDNetwork.app */,
+				BFCE4C731991D89C00E6DC19 /* YDNetworkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFCE4C511991D89C00E6DC19 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFCE4C521991D89C00E6DC19 /* Foundation.framework */,
+				BFCE4C541991D89C00E6DC19 /* CoreGraphics.framework */,
+				BFCE4C561991D89C00E6DC19 /* UIKit.framework */,
+				BFCE4C741991D89C00E6DC19 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BFCE4C581991D89C00E6DC19 /* YDNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				BFCE4C611991D89C00E6DC19 /* AppDelegate.h */,
+				BFCE4C621991D89C00E6DC19 /* AppDelegate.m */,
+				BFCE4C641991D89C00E6DC19 /* Main_iPhone.storyboard */,
+				BFCE4C671991D89C00E6DC19 /* Main_iPad.storyboard */,
+				BFCE4C6A1991D89C00E6DC19 /* ViewController.h */,
+				BFCE4C6B1991D89C00E6DC19 /* ViewController.m */,
+				BFCE4C6D1991D89C00E6DC19 /* Images.xcassets */,
+				BFCE4C591991D89C00E6DC19 /* Supporting Files */,
+			);
+			path = YDNetwork;
+			sourceTree = "<group>";
+		};
+		BFCE4C591991D89C00E6DC19 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFCE4C5A1991D89C00E6DC19 /* YDNetwork-Info.plist */,
+				BFCE4C5B1991D89C00E6DC19 /* InfoPlist.strings */,
+				BFCE4C5E1991D89C00E6DC19 /* main.m */,
+				BFCE4C601991D89C00E6DC19 /* YDNetwork-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BFCE4C7A1991D89C00E6DC19 /* YDNetworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				BFCE4C801991D89C00E6DC19 /* YDNetworkTests.m */,
+				BFCE4C7B1991D89C00E6DC19 /* Supporting Files */,
+			);
+			path = YDNetworkTests;
+			sourceTree = "<group>";
+		};
+		BFCE4C7B1991D89C00E6DC19 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFCE4C7C1991D89C00E6DC19 /* YDNetworkTests-Info.plist */,
+				BFCE4C7D1991D89C00E6DC19 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BFCE4C4E1991D89C00E6DC19 /* YDNetwork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFCE4C841991D89C00E6DC19 /* Build configuration list for PBXNativeTarget "YDNetwork" */;
+			buildPhases = (
+				BFCE4C4B1991D89C00E6DC19 /* Sources */,
+				BFCE4C4C1991D89C00E6DC19 /* Frameworks */,
+				BFCE4C4D1991D89C00E6DC19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YDNetwork;
+			productName = YDNetwork;
+			productReference = BFCE4C4F1991D89C00E6DC19 /* YDNetwork.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BFCE4C721991D89C00E6DC19 /* YDNetworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFCE4C871991D89C00E6DC19 /* Build configuration list for PBXNativeTarget "YDNetworkTests" */;
+			buildPhases = (
+				BFCE4C6F1991D89C00E6DC19 /* Sources */,
+				BFCE4C701991D89C00E6DC19 /* Frameworks */,
+				BFCE4C711991D89C00E6DC19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFCE4C791991D89C00E6DC19 /* PBXTargetDependency */,
+			);
+			name = YDNetworkTests;
+			productName = YDNetworkTests;
+			productReference = BFCE4C731991D89C00E6DC19 /* YDNetworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFCE4C471991D89C00E6DC19 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "网易有道";
+				TargetAttributes = {
+					BFCE4C721991D89C00E6DC19 = {
+						TestTargetID = BFCE4C4E1991D89C00E6DC19;
+					};
+				};
+			};
+			buildConfigurationList = BFCE4C4A1991D89C00E6DC19 /* Build configuration list for PBXProject "YDNetwork" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BFCE4C461991D89C00E6DC19;
+			productRefGroup = BFCE4C501991D89C00E6DC19 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BFCE4C4E1991D89C00E6DC19 /* YDNetwork */,
+				BFCE4C721991D89C00E6DC19 /* YDNetworkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BFCE4C4D1991D89C00E6DC19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFCE4C691991D89C00E6DC19 /* Main_iPad.storyboard in Resources */,
+				BFCE4C6E1991D89C00E6DC19 /* Images.xcassets in Resources */,
+				BFCE4C661991D89C00E6DC19 /* Main_iPhone.storyboard in Resources */,
+				BFCE4C5D1991D89C00E6DC19 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFCE4C711991D89C00E6DC19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFCE4C7F1991D89C00E6DC19 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BFCE4C4B1991D89C00E6DC19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFCE4C6C1991D89C00E6DC19 /* ViewController.m in Sources */,
+				BFCE4C631991D89C00E6DC19 /* AppDelegate.m in Sources */,
+				BFCE4C5F1991D89C00E6DC19 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFCE4C6F1991D89C00E6DC19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFCE4C811991D89C00E6DC19 /* YDNetworkTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BFCE4C791991D89C00E6DC19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFCE4C4E1991D89C00E6DC19 /* YDNetwork */;
+			targetProxy = BFCE4C781991D89C00E6DC19 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BFCE4C5B1991D89C00E6DC19 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFCE4C5C1991D89C00E6DC19 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BFCE4C641991D89C00E6DC19 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFCE4C651991D89C00E6DC19 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		BFCE4C671991D89C00E6DC19 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFCE4C681991D89C00E6DC19 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		BFCE4C7D1991D89C00E6DC19 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFCE4C7E1991D89C00E6DC19 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BFCE4C821991D89C00E6DC19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BFCE4C831991D89C00E6DC19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BFCE4C851991D89C00E6DC19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YDNetwork/YDNetwork-Prefix.pch";
+				INFOPLIST_FILE = "YDNetwork/YDNetwork-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BFCE4C861991D89C00E6DC19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YDNetwork/YDNetwork-Prefix.pch";
+				INFOPLIST_FILE = "YDNetwork/YDNetwork-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BFCE4C881991D89C00E6DC19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/YDNetwork.app/YDNetwork";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YDNetwork/YDNetwork-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "YDNetworkTests/YDNetworkTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BFCE4C891991D89C00E6DC19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/YDNetwork.app/YDNetwork";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "YDNetwork/YDNetwork-Prefix.pch";
+				INFOPLIST_FILE = "YDNetworkTests/YDNetworkTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BFCE4C4A1991D89C00E6DC19 /* Build configuration list for PBXProject "YDNetwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFCE4C821991D89C00E6DC19 /* Debug */,
+				BFCE4C831991D89C00E6DC19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFCE4C841991D89C00E6DC19 /* Build configuration list for PBXNativeTarget "YDNetwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFCE4C851991D89C00E6DC19 /* Debug */,
+				BFCE4C861991D89C00E6DC19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BFCE4C871991D89C00E6DC19 /* Build configuration list for PBXNativeTarget "YDNetworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFCE4C881991D89C00E6DC19 /* Debug */,
+				BFCE4C891991D89C00E6DC19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFCE4C471991D89C00E6DC19 /* Project object */;
+}
