@@ -10,6 +10,7 @@
 		5DB1E773952D45689F5D0BA7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD1792D1AF94721B24A5C5B /* libPods.a */; };
 		BF16B51F1998C5EE0076727D /* YDNetworkRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BF16B51E1998C5EE0076727D /* YDNetworkRequestOperation.m */; };
 		BF16B5221998C6040076727D /* YDDownloadRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BF16B5211998C6040076727D /* YDDownloadRequestOperation.m */; };
+		BF16B5441999F6F10076727D /* IndexModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF16B5431999F6F10076727D /* IndexModel.m */; };
 		BFCE4C531991D89C00E6DC19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCE4C521991D89C00E6DC19 /* Foundation.framework */; };
 		BFCE4C551991D89C00E6DC19 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCE4C541991D89C00E6DC19 /* CoreGraphics.framework */; };
 		BFCE4C571991D89C00E6DC19 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCE4C561991D89C00E6DC19 /* UIKit.framework */; };
@@ -44,6 +45,8 @@
 		BF16B51E1998C5EE0076727D /* YDNetworkRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDNetworkRequestOperation.m; sourceTree = "<group>"; };
 		BF16B5201998C6040076727D /* YDDownloadRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDDownloadRequestOperation.h; sourceTree = "<group>"; };
 		BF16B5211998C6040076727D /* YDDownloadRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDDownloadRequestOperation.m; sourceTree = "<group>"; };
+		BF16B5421999F6F10076727D /* IndexModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexModel.h; sourceTree = "<group>"; };
+		BF16B5431999F6F10076727D /* IndexModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexModel.m; sourceTree = "<group>"; };
 		BFCE4C4F1991D89C00E6DC19 /* YDNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YDNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFCE4C521991D89C00E6DC19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BFCE4C541991D89C00E6DC19 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -94,6 +97,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF16B5401999F6BC0076727D /* YDNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				BFDB5914199380250010824D /* YDNetworkManager.h */,
+				BFDB5915199380250010824D /* YDNetworkManager.m */,
+				BF16B51D1998C5EE0076727D /* YDNetworkRequestOperation.h */,
+				BF16B51E1998C5EE0076727D /* YDNetworkRequestOperation.m */,
+				BF16B5201998C6040076727D /* YDDownloadRequestOperation.h */,
+				BF16B5211998C6040076727D /* YDDownloadRequestOperation.m */,
+			);
+			name = YDNetwork;
+			sourceTree = "<group>";
+		};
+		BF16B5411999F6CC0076727D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF16B5421999F6F10076727D /* IndexModel.h */,
+				BF16B5431999F6F10076727D /* IndexModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		BFCE4C461991D89C00E6DC19 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +154,7 @@
 		BFCE4C581991D89C00E6DC19 /* YDNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				BF16B5411999F6CC0076727D /* Model */,
 				BFCE4C611991D89C00E6DC19 /* AppDelegate.h */,
 				BFCE4C621991D89C00E6DC19 /* AppDelegate.m */,
 				BFCE4C641991D89C00E6DC19 /* Main_iPhone.storyboard */,
@@ -137,12 +163,7 @@
 				BFCE4C6B1991D89C00E6DC19 /* ViewController.m */,
 				BFCE4C6D1991D89C00E6DC19 /* Images.xcassets */,
 				BFCE4C591991D89C00E6DC19 /* Supporting Files */,
-				BFDB5914199380250010824D /* YDNetworkManager.h */,
-				BFDB5915199380250010824D /* YDNetworkManager.m */,
-				BF16B51D1998C5EE0076727D /* YDNetworkRequestOperation.h */,
-				BF16B51E1998C5EE0076727D /* YDNetworkRequestOperation.m */,
-				BF16B5201998C6040076727D /* YDDownloadRequestOperation.h */,
-				BF16B5211998C6040076727D /* YDDownloadRequestOperation.m */,
+				BF16B5401999F6BC0076727D /* YDNetwork */,
 			);
 			path = YDNetwork;
 			sourceTree = "<group>";
@@ -313,6 +334,7 @@
 				BFCE4C631991D89C00E6DC19 /* AppDelegate.m in Sources */,
 				BFCE4C5F1991D89C00E6DC19 /* main.m in Sources */,
 				BF16B51F1998C5EE0076727D /* YDNetworkRequestOperation.m in Sources */,
+				BF16B5441999F6F10076727D /* IndexModel.m in Sources */,
 				BF16B5221998C6040076727D /* YDDownloadRequestOperation.m in Sources */,
 				BFDB5916199380250010824D /* YDNetworkManager.m in Sources */,
 			);
