@@ -3,7 +3,7 @@
 //  YDNetwork
 //
 //  Created by liuty on 14-8-7.
-//  Copyright (c) 2014年 Netease Youdao. All rights reserved.
+//  Copyright (c) 2014年 _liuty_. All rights reserved.
 //
 
 #import "AFHTTPRequestOperationManager.h"
@@ -19,6 +19,10 @@ typedef NS_ENUM(NSInteger, YDNetworkReachabilityStatus) {
 
 @interface YDNetworkManager : AFHTTPRequestOperationManager
 
+//------------------------------------------------------------------------------
+/**
+ *  下载任务的队列
+ */
 @property (nonatomic, strong) NSOperationQueue *downloadQueue;
 
 //------------------------------------------------------------------------------

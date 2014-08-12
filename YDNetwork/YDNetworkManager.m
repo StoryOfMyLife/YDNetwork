@@ -3,7 +3,7 @@
 //  YDNetwork
 //
 //  Created by liuty on 14-8-7.
-//  Copyright (c) 2014年 Netease Youdao. All rights reserved.
+//  Copyright (c) 2014年 _liuty_. All rights reserved.
 //
 
 #import "YDNetworkManager.h"
