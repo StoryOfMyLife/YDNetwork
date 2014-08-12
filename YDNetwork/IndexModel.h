@@ -25,7 +25,7 @@
 @property (nonatomic, strong) NSString<Optional> *abtest;
 @property (nonatomic, strong) NSString *style;
 @property (nonatomic, strong) NSString *dataID;
-//@property (nonatomic) NSString *url;
+@property (nonatomic, strong) NSString<Optional> *url;
 @property (nonatomic, strong) NSString<Optional> *summary;
 @property (nonatomic, strong) NSString<Optional> *title;
 @property (nonatomic, strong) NSString<Optional> *type;
