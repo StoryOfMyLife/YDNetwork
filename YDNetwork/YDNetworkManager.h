@@ -6,16 +6,7 @@
 //  Copyright (c) 2014年 _liuty_. All rights reserved.
 //
 
-#import "AFHTTPRequestOperationManager.h"
-#import "YDNetworkRequestOperation.h"
-#import "YDDownloadRequestOperation.h"
-
-typedef NS_ENUM(NSInteger, YDNetworkReachabilityStatus) {
-    YDNetworkReachabilityStatusUnknown      = -1,
-    YDNetworkReachabilityStatusNotReachable = 0,
-    YDNetworkReachabilityStatus3G           = 1,
-    YDNetworkReachabilityStatusWiFi         = 2,
-};
+#import "YDNetworking.h"
 
 @interface YDNetworkManager : AFHTTPRequestOperationManager
 

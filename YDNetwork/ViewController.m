@@ -29,7 +29,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     NSString *url = @"http://dict.youdao.com/infoline?";
     NSDictionary *parameters = @{@"apiversion" : @"2",
-                                 @"date" : @"2014-08-12",
+                                 @"date" : @"2014-08-14",
                                  @"mode" : @"preview",
                                  @"client" : @"mobile",
                                  @"keyfrom" : @"mdict.5.1.1.iphonepro",
@@ -39,7 +39,7 @@
 #pragma clang diagnostic ignored "-Wunused-variable"
     YDNetworkRequestOperation *operation = [[YDNetworkManager sharedManager] getJSONFromURL:url parameters:parameters priority:NSOperationQueuePriorityNormal success:^(id responseObject) {
         IndexModel *model = [[IndexModel alloc] initWithDictionary:responseObject error:nil];
-        NSLog(@"%@", responseObject);
+        NSLog(@"%@", model);
     } failure:^(NSError *error) {
         NSLog(@"%@", error.debugDescription);
     }];
@@ -71,9 +71,7 @@
         [self.operation resume];
     } else {
         [self.operation pause];
-    }
-    
-    
+    }    
 }
 - (IBAction)cancel:(id)sender {
     [self.operation cancel];

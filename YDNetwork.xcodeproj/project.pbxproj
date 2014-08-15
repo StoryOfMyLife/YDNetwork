@@ -47,6 +47,7 @@
 		BF16B5211998C6040076727D /* YDDownloadRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDDownloadRequestOperation.m; sourceTree = "<group>"; };
 		BF16B5421999F6F10076727D /* IndexModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexModel.h; sourceTree = "<group>"; };
 		BF16B5431999F6F10076727D /* IndexModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexModel.m; sourceTree = "<group>"; };
+		BFC40D57199E045700CB1FF8 /* YDNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDNetworking.h; sourceTree = "<group>"; };
 		BFCE4C4F1991D89C00E6DC19 /* YDNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YDNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFCE4C521991D89C00E6DC19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BFCE4C541991D89C00E6DC19 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -106,6 +107,7 @@
 				BF16B51E1998C5EE0076727D /* YDNetworkRequestOperation.m */,
 				BF16B5201998C6040076727D /* YDDownloadRequestOperation.h */,
 				BF16B5211998C6040076727D /* YDDownloadRequestOperation.m */,
+				BFC40D57199E045700CB1FF8 /* YDNetworking.h */,
 			);
 			name = YDNetwork;
 			sourceTree = "<group>";
