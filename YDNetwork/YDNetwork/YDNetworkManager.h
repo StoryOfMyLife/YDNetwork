@@ -96,6 +96,22 @@
 
 //------------------------------------------------------------------------------
 /**
+ *  Creates and runs an `YDNetworkRequestOperation` with a `POST` request.
+ *
+ *  @param url        服务器请求的地址, 不能为空
+ *  @param parameters 请求所带参数(optional) 可用于代替url中的参数
+ *  @param success    请求成功的返回
+ *  @param failure    请求失败的返回
+ 
+ *  @return YDNetworkRequestOperation
+ */
+- (YDNetworkRequestOperation *)postToURL:(NSString *)url
+                              parameters:(NSDictionary *)parameters
+                                 success:(void (^)(id responseObject))success
+                                 failure:(void (^)(NSError *error))failure;
+
+//------------------------------------------------------------------------------
+/**
  *  Creates and runs an `YDDownloadRequestOperation` with a `GET` request.
  *
  *  @param url        服务器数据请求的地址, 不能为空

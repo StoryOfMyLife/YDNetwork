@@ -133,6 +133,29 @@
 }
 
 #pragma mark -
+#pragma mark Post Method
+
+- (YDNetworkRequestOperation *)postToURL:(NSString *)url
+                              parameters:(NSDictionary *)parameters
+                                 success:(void (^)(id))success
+                                 failure:(void (^)(NSError *))failure
+{
+    self.responseSerializer = [AFJSONResponseSerializer serializer];
+    
+    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:@"POST" URLString:[[NSURL URLWithString:url relativeToURL:self.baseURL] absoluteString] parameters:parameters error:nil];
+    
+    YDNetworkRequestOperation *operation = [self requestOperationWithRequest:request success:^(YDNetworkRequestOperation *operation, id responseObject) {
+        success(responseObject);
+    } failure:^(YDNetworkRequestOperation *operation, NSError *error) {
+        failure(error);
+    }];
+    
+    [self.operationQueue addOperation:operation];
+    
+    return operation;
+}
+
+#pragma mark -
 #pragma mark Internal Method
 - (YDNetworkRequestOperation *)requestOperationWithRequest:(NSURLRequest *)request
                                                    success:(void (^)(YDNetworkRequestOperation *operation, id responseObject))success
@@ -144,7 +167,7 @@
     operation.credential = self.credential;
     operation.securityPolicy = self.securityPolicy;
     
-    __strong YDNetworkRequestOperation *wOperation = operation;
+    __weak YDNetworkRequestOperation *wOperation = operation;
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         success(wOperation, responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
