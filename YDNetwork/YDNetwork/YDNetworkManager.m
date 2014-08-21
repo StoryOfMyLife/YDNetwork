@@ -39,20 +39,20 @@
 
 - (BOOL)isReachable
 {
-    return [self.reachabilityManager isReachable];
+    return [[Reachability reachabilityForInternetConnection] isReachable];
 }
 
 - (YDNetworkReachabilityStatus)networkReachabilityStatus
 {
     YDNetworkReachabilityStatus status = YDNetworkReachabilityStatusUnknown;
-    switch (self.reachabilityManager.networkReachabilityStatus) {
-        case AFNetworkReachabilityStatusNotReachable:
+    switch ([[Reachability reachabilityForInternetConnection] currentReachabilityStatus]) {
+        case NotReachable:
             status = YDNetworkReachabilityStatusNotReachable;
             break;
-        case AFNetworkReachabilityStatusReachableViaWWAN:
+        case ReachableViaWWAN:
             status = YDNetworkReachabilityStatus3G;
             break;
-        case AFNetworkReachabilityStatusReachableViaWiFi:
+        case ReachableViaWiFi:
             status = YDNetworkReachabilityStatusWiFi;
             break;
         default:
@@ -73,7 +73,7 @@
     //set JSON Serialization
     self.responseSerializer = [AFJSONResponseSerializer serializer];
     
-    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:@"GET" URLString:[[NSURL URLWithString:url relativeToURL:self.baseURL] absoluteString] parameters:parameters error:nil];
+    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:@"GET" URLString:[[NSURL URLWithString:url] absoluteString] parameters:parameters error:nil];
     
     YDNetworkRequestOperation *operation = [self requestOperationWithRequest:request success:^(YDNetworkRequestOperation *operation, id responseObject) {
         success(responseObject);
@@ -96,7 +96,7 @@
     //set XML Serialization
     self.responseSerializer = [AFXMLParserResponseSerializer serializer];
     
-    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:@"GET" URLString:[[NSURL URLWithString:url relativeToURL:self.baseURL] absoluteString] parameters:parameters error:nil];
+    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:@"GET" URLString:[[NSURL URLWithString:url] absoluteString] parameters:parameters error:nil];
     
     YDNetworkRequestOperation *operation = [self requestOperationWithRequest:request success:^(AFHTTPRequestOperation *operation, id responseObject) {
         success(responseObject);
@@ -118,7 +118,7 @@
     //set image Serialization
     self.responseSerializer = [AFImageResponseSerializer serializer];
     
-    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:@"GET" URLString:[[NSURL URLWithString:url relativeToURL:self.baseURL] absoluteString] parameters:parameters error:nil];
+    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:@"GET" URLString:[[NSURL URLWithString:url] absoluteString] parameters:parameters error:nil];
     
     YDNetworkRequestOperation *operation = [self requestOperationWithRequest:request success:^(AFHTTPRequestOperation *operation, id responseObject) {
         success(responseObject);
@@ -142,7 +142,7 @@
 {
     self.responseSerializer = [AFJSONResponseSerializer serializer];
     
-    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:@"POST" URLString:[[NSURL URLWithString:url relativeToURL:self.baseURL] absoluteString] parameters:parameters error:nil];
+    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:@"POST" URLString:[[NSURL URLWithString:url] absoluteString] parameters:parameters error:nil];
     
     YDNetworkRequestOperation *operation = [self requestOperationWithRequest:request success:^(YDNetworkRequestOperation *operation, id responseObject) {
         success(responseObject);
@@ -152,6 +152,23 @@
     
     [self.operationQueue addOperation:operation];
     
+    return operation;
+}
+
+- (YDNetworkRequestOperation *)postToURL:(NSString *)url
+                              parameters:(NSDictionary *)parameters
+                        constructingBody:(void (^)(id formData))block
+                                 success:(void (^)(id responseObject))success
+                                 failure:(void (^)(NSError *error))failure
+{
+    NSMutableURLRequest *request = [self.requestSerializer multipartFormRequestWithMethod:@"POST" URLString:[[NSURL URLWithString:url] absoluteString] parameters:parameters constructingBodyWithBlock:block error:nil];
+    YDNetworkRequestOperation *operation = [self requestOperationWithRequest:request success:^(YDNetworkRequestOperation *operation, id responseObject) {
+        success(responseObject);
+    } failure:^(YDNetworkRequestOperation *operation, NSError *error) {
+        failure(error);
+    }];
+    
+    [self.operationQueue addOperation:operation];
     return operation;
 }
 
@@ -187,7 +204,7 @@
                                         success:(void (^)(id))success
                                         failure:(void (^)(NSError *))failure
 {
-    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:@"GET" URLString:[[NSURL URLWithString:url relativeToURL:self.baseURL] absoluteString] parameters:parameters error:nil];
+    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:@"GET" URLString:[[NSURL URLWithString:url] absoluteString] parameters:parameters error:nil];
     
     YDDownloadRequestOperation *operation = [[YDDownloadRequestOperation alloc] initWithRequest:request targetPath:path shouldResume:YES];
     

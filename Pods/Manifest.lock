@@ -21,15 +21,18 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - JSONModel (0.13.0)
+  - Reachability (3.1.1)
 
 DEPENDENCIES:
   - AFDownloadRequestOperation (~> 2.0.1)
   - AFNetworking (~> 2.2.4)
   - JSONModel (~> 0.13.0)
+  - Reachability (~> 3.1.1)
 
 SPEC CHECKSUMS:
-  AFDownloadRequestOperation: fcb19dc1010296e05c76d863d340051820ffb326
-  AFNetworking: 01aa7c3aa9a200b94943e54072a4373f14b3d219
-  JSONModel: 1ce27c7d59de0ada0048e64f20006ce02e9ce73d
+  AFDownloadRequestOperation: e223a65bc56fb8e6ae5d289b649c7bcc6b307f0d
+  AFNetworking: ab63e259fe91eef4519b371ef0a4955af0e73e64
+  JSONModel: 62ea96b49ea18a8b91ef89c249dba291d8601d82
+  Reachability: 8e9635e3cb4f98e7f825e51147f677ecc694d0e7
 
-COCOAPODS: 0.32.1
+COCOAPODS: 0.33.1

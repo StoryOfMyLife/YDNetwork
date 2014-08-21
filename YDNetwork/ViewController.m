@@ -27,9 +27,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    BOOL isReachable = [[YDNetworkManager sharedManager] isReachable];
     NSString *url = @"http://dict.youdao.com/infoline?";
     NSDictionary *parameters = @{@"apiversion" : @"2",
-                                 @"date" : @"2014-08-14",
+                                 @"date" : @"2014-08-21",
                                  @"mode" : @"preview",
                                  @"client" : @"mobile",
                                  @"keyfrom" : @"mdict.5.1.1.iphonepro",
@@ -44,6 +46,22 @@
         NSLog(@"%@", error.debugDescription);
     }];
 #pragma clang diagnostic pop
+    
+    [[YDNetworkManager sharedManager].reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        switch (status) {
+            case AFNetworkReachabilityStatusReachableViaWWAN:
+                NSLog(@"3g");
+                break;
+            case AFNetworkReachabilityStatusReachableViaWiFi:
+                NSLog(@"wifi");
+                break;
+            case AFNetworkReachabilityStatusNotReachable:
+                NSLog(@"not reachable");
+            default:
+                break;
+        }
+    }];
+    
 }
 
 #pragma mark -

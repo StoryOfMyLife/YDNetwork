@@ -20,5 +20,6 @@ typedef NS_ENUM(NSInteger, YDNetworkReachabilityStatus) {
 #import "YDNetworkRequestOperation.h"
 #import "YDDownloadRequestOperation.h"
 #import "YDNetworkManager.h"
+#import "Reachability.h"
 
 #endif
